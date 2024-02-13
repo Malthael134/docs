@@ -1,0 +1,103 @@
+site_name: Lernwebsite (In Arbeit)
+site_author: Johann Friedrich Heuer
+site_description: Dokumentation für die Informatik AG am Kaiser-Wilhelm- und Ratsgymnasium Hannover.
+site_url: https://kwr-informatik-ag.github.io/learn/de/
+
+# Directories
+docs_dir: "../../docs/de"
+site_dir: "../../generated/de"
+
+# Repository
+repo_name: GitHub Repository
+repo_url: https://github.com/kwr-informatik-ag/documentation
+
+# Copyright
+# copyright: Copyright &copy; 2024 KWR Hannover
+
+theme:
+  name: material
+  custom_dir: "../../overrides"
+  logo: assets/images/logo-full.png
+  favicon: assets/images/favicon.png
+  language: de
+  icon:
+    admonition:
+      note: fontawesome/solid/note-sticky
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/skull
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
+
+  features:
+    # toc (table of content)
+    - toc.follow
+
+    # search
+    - search.suggest
+
+    # content
+    - content.tabs.link
+    - content.code.copy
+    - content.code.annotate
+
+    # navigation
+    - navigation.top
+    - navigation.path
+    - navigation.tabs
+    - navigation.tabs.sticky
+    # - navigation.expand
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.sections
+    - navigation.indexes
+
+  palette:
+    scheme: slate
+    primary: black
+    accent: indigo
+
+extra:
+  homepage: https://kwr-informatik-ag.github.io/
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/kwr-informatik-ag/
+  analytics:
+    provider: google
+    property: G-ZMYL9F574V
+
+plugins:
+  - social
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        # - name: mermaid
+        #   class: mermaid
+        #   format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Homepage: index.md
