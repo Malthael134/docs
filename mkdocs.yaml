@@ -1,25 +1,25 @@
-site_name: Lernwebsite (In Arbeit)
-site_author: Johann Friedrich Heuer
-site_description: Dokumentation für die Informatik AG am Kaiser-Wilhelm- und Ratsgymnasium Hannover.
-site_url: https://kwr-informatik-ag.github.io/learn/de/
+site_name: Docs
+site_author: Johann Heuer
+site_description: Docs for... everything I know and need to write down.
+# site_url: https://MY_URL/
 
 # Directories
-docs_dir: "../../docs/de"
-site_dir: "../../generated/de"
+docs_dir: "docs"
+site_dir: "generated"
 
 # Repository
 repo_name: GitHub Repository
-repo_url: https://github.com/kwr-informatik-ag/documentation
+repo_url: https://github.com/malthael134/docs
 
 # Copyright
-# copyright: Copyright &copy; 2024 KWR Hannover
+# copyright: Copyright &copy; 2024
 
 theme:
   name: material
-  custom_dir: "../../overrides"
-  logo: assets/images/logo-full.png
-  favicon: assets/images/favicon.png
-  language: de
+  custom_dir: "overrides"
+  # logo: assets/images/logo-full.png
+  # favicon: assets/images/favicon.png
+  language: en
   icon:
     admonition:
       note: fontawesome/solid/note-sticky
@@ -65,13 +65,10 @@ theme:
     accent: indigo
 
 extra:
-  homepage: https://kwr-informatik-ag.github.io/
+  # homepage: https://malthael134.github.io/
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/kwr-informatik-ag/
-  analytics:
-    provider: google
-    property: G-ZMYL9F574V
+      link: https://github.com/malthael134/
 
 plugins:
   - social
@@ -87,17 +84,20 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.tabbed:
       alternate_style: true
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
+  # - pymdownx.highlight:
+  #     anchor_linenums: true
+  #     line_spans: __span
+  #     pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences:
-      custom_fences:
-        # - name: mermaid
-        #   class: mermaid
-        #   format: !!python/name:pymdownx.superfences.fence_code_format
+  # - pymdownx.superfences:
+  #     custom_fences:
+  #       - name: mermaid
+  #         class: mermaid
+  #         format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
-  - Homepage: index.md
+  - Homepage:
+    - index.md
+  - Kubernetes:
+    - "ArgoCD": "kubernetes/argocd.md"
